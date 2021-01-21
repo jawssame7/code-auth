@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Auth Sample</title>
+        <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+        <style>
+            body {
+                margin: 50px 0 0 0;
+                padding: 0;
+                width: 100%;
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                text-align: center;
+                color: #aaa;
+                font-size: 18px;
+            }
+
+            h1 {
+                color: #719e40;
+                letter-spacing: -3px;
+                font-family: 'Lato', sans-serif;
+                font-size: 100px;
+                font-weight: 200;
+                margin-bottom: 0;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    </head>
+    <body>
+        <h1>Auth Sample</h1>
+        <div style="padding-top:20px">
+          <button onclick="connectGoogle()">Google Auth</button>
+        </div>
+        <div style="padding-top:20px">
+          <div>コード認証 結果</div>
+          <p id="google_code_info"></p>
+        </div>
+        <div style="padding-top:20px">
+          <button onclick="getRefreshTokenGoogle()">リフレッシュトークン取得</button>
+          <div>リフレッシュトークン取得 結果</div>
+          <p id="google_token_info"></p>
+        </div>
+        <div style="padding-top:20px">
+          <button onclick="tokenRefreshGoogle()">リフレッシュトークン再取得</button>
+        </div>
+        <div style="padding-top:20px">
+          <div>リフレッシュトークン取得 結果</div>
+          <p id="google_refresh_token_info"></p>
+        </div>
+        <div style="padding-top:20px">
+          <button onclick="tokenRefreshGoogle()">Google refresh_token再取得</button>
+        </div>
+        <div style="padding-top:20px">
+          <div>リフレッシュトークン 再取得 結果</div>
+          <p id="google_token_refresh"></p>
+        </div>
+        <div style="padding-top:20px">
+          <button onclick="connectOffice365()">Office 365 Auth</button>
+        </div>
+        <div style="padding-top:20px">
+          <div>リフレッシュトークン取得 結果</div>
+          <p id="office365_token_info"></p>
+        </div>
+        <div style="padding-top:20px">
+          <button onclick="tokenRefreshOffice365()">Office 365 refresh_token 再取得</button>
+        </div>
+        <div style="padding-top:20px">
+          <div>リフレッシュトークン 再取得 結果</div>
+          <p id="office365_token_refresh"></p>
+        </div>
+        <script src="./js/util.js"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
